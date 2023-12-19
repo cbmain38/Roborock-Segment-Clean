@@ -1,0 +1,28 @@
+alias: Selective Room Cleaning
+sequence:
+  - service: vacuum.send_command
+    data:
+      command: app_segment_clean
+      params:
+        - segments: >
+            {%- set rooms = {
+                "input_boolean.living_room_clean": 16,
+                "input_boolean.dining_room_clean": 23,
+                "input_boolean.entrance_clean": 24,
+                "input_boolean.kitchen_clean": 17,
+                "input_boolean.hallway_clean": 19,
+                "input_boolean.kids_room_clean": 21,
+                "input_boolean.bathroom_clean": 22,
+                "input_boolean.e_and_c_room_clean": 20
+              } -%}
+            {%- set ns = namespace(room_numbers=[]) -%} {%- for room in
+            state_attr('group.rooms_to_clean', 'entity_id') -%}
+              {%- if states(room) == 'on' -%}
+                {%- set ns.room_numbers = ns.room_numbers + [rooms.get(room)] -%}
+              {%- endif -%}
+            {%- endfor -%} {{ ns.room_numbers | join(', ') }}
+          repeat: 1
+    target:
+      entity_id: vacuum.roborock_s8_pro_ultra
+mode: single
+icon: mdi:robot-vacuum
