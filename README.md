@@ -25,7 +25,7 @@ To add a group helper that can include input_boolean entities, there are a few s
 
      <sub>group: !include groups.yaml</sub>
 
-  2) In the same directory as your configuration.yaml file, add a folder named groups.yaml, and add following sample groups.yaml code. Reminder to set the input_booleans specific to your configuration.  
+  2) In the same directory as your configuration.yaml file, add a folder named groups.yaml, and add following [sample code.](groups.yaml) Reminder to set the input_booleans specific to your configuration.  
 
      Once added, your group will be available in Home Assistant as an entity. Note: It will not be under helpers.
 
@@ -33,6 +33,15 @@ To add a group helper that can include input_boolean entities, there are a few s
      ![ExampleGroup](Rooms_To_Clean_2.png)
 
 ### Script
+A [sample script](Selective_Room_Cleaning.yaml) can be utilized.  
+  #### What It Does
+  When run, the script will run cleaning for the selected rooms when the corresponding input_boolean for the room is in the 'On' state.
+
+  #### Known limitations
+  The script in its current form will not clean individual rooms, so a minimum of 2 rooms/input_booleans need to be set in order for the script to work. 
+
+## Putting it all together
+
 
 
 
