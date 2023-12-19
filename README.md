@@ -41,7 +41,13 @@ A [sample script](Selective_Room_Cleaning.yaml) can be utilized.
   The script in its current form will not clean individual rooms, so a minimum of 2 rooms/input_booleans need to be set in order for the script to work. 
 
 ## Putting it all together
-I've included my [dashboard yaml](Sample%20Dashboard.yml)
+I've included my [dashboard yaml](SampleDashboard.yml) to use as an example of how this all can come together. In it, i've done the following:
+1) I included the [Lovelace Vacuum Card](https://github.com/denysdovhan/vacuum-card) to provide general functionality
+2) I included the card provided by the Roborock integration to provide statistics and other information regarding the vacuum
+3) I added the mop mode and mop intensity selectors that are included as part of the Roborock integration
+4) Lasly, I included the Group described here that allows me to select which rooms I want to clean, and a button as shown below titled 'Selective Room Clean' that simply runs the script described in this article.
+
+Welcome to comments and any improvements that can be made to this, and I hope this is helpful to folks until the official integration provides for a better solution.
 
 
 
