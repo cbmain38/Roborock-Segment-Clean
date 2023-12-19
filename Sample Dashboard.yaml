@@ -1,0 +1,87 @@
+- title: Vacuum
+    path: vacuum
+    icon: mdi:robot-vacuum
+    badges: []
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: custom:vacuum-card
+            entity: vacuum.roborock_s8_pro_ultra
+          - type: entities
+            entities:
+              - entity: select.roborock_s8_pro_ultra_mop_intensity
+              - entity: select.roborock_s8_pro_ultra_mop_mode
+            title: Mop Mode Select
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            content: >-
+              To run ***Selective Room Cleaning***, please select the rooms you
+              wish to clean (must be 2 or more) in **Rooms to Clean** and then
+              click on the button **Selective Room Clean**.
+            title: Selective Room Cleaning
+          - show_name: true
+            show_icon: true
+            type: button
+            tap_action:
+              action: call-service
+              service: script.selective_room_cleaning
+              target: {}
+            entity: input_button.selective_room_clean
+          - type: entities
+            entities:
+              - entity: input_boolean.entrance_clean
+              - entity: input_boolean.living_room_clean
+              - entity: input_boolean.dining_room_clean
+              - entity: input_boolean.kitchen_clean
+              - entity: input_boolean.hallway_clean
+              - entity: input_boolean.kids_room_clean
+              - entity: input_boolean.bathroom_clean
+              - entity: input_boolean.e_and_c_room_clean
+            title: Rooms to Clean
+            state_color: true
+      - type: entities
+        entities:
+          - entity: sensor.roborock_s8_pro_ultra_battery
+            name: Battery
+          - entity: binary_sensor.roborock_s8_pro_ultra_cleaning
+            name: Cleaning
+          - entity: sensor.roborock_s8_pro_ultra_cleaning_area
+            name: Cleaning area
+          - entity: sensor.roborock_s8_pro_ultra_cleaning_progress
+            name: Cleaning progress
+          - entity: sensor.roborock_s8_pro_ultra_cleaning_time
+            name: Cleaning time
+          - entity: sensor.roborock_s8_pro_ultra_dock_error
+            name: Dock error
+          - entity: sensor.roborock_s8_pro_ultra_filter_time_left
+            name: Filter time left
+          - entity: sensor.roborock_s8_pro_ultra_last_clean_begin
+            name: Last clean begin
+          - entity: sensor.roborock_s8_pro_ultra_last_clean_end
+            name: Last clean end
+          - entity: sensor.roborock_s8_pro_ultra_main_brush_time_left
+            name: Main brush time left
+          - entity: binary_sensor.roborock_s8_pro_ultra_mop_attached
+            name: Mop attached
+          - entity: binary_sensor.roborock_s8_pro_ultra_mop_drying
+            name: Mop drying
+          - entity: sensor.roborock_s8_pro_ultra_mop_drying_remaining_time
+            name: Mop drying remaining time
+          - entity: sensor.roborock_s8_pro_ultra_sensor_time_left
+            name: Sensor time left
+          - entity: sensor.roborock_s8_pro_ultra_side_brush_time_left
+            name: Side brush time left
+          - entity: sensor.roborock_s8_pro_ultra_status
+            name: Status
+          - entity: sensor.roborock_s8_pro_ultra_total_cleaning_area
+            name: Total cleaning area
+          - entity: sensor.roborock_s8_pro_ultra_total_cleaning_time
+            name: Total cleaning time
+          - entity: sensor.roborock_s8_pro_ultra_vacuum_error
+            name: Vacuum error
+          - entity: binary_sensor.roborock_s8_pro_ultra_water_box_attached
+            name: Water box attached
+          - entity: binary_sensor.roborock_s8_pro_ultra_water_shortage
+            name: Water shortage
+        title: Roborock S8 Pro Ultra
