@@ -4,6 +4,7 @@ sequence:
     data:
       command: app_segment_clean
       params:
+      #Remember to set the input_booleans for your specific room and the number to your specific Room ID
         - segments: >
               {%- set rooms = {
                 "input_boolean.living_room_clean": 16,
