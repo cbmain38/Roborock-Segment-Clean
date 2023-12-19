@@ -50,6 +50,8 @@ I've included my [dashboard yaml](SampleDashboard.yml) to use as an example of h
 3) I added the mop mode and mop intensity selectors that are included as part of the Roborock integration
 4) Lasly, I included the Group described here that allows me to select which rooms I want to clean, and a button as shown below titled 'Selective Room Clean' that simply runs the script described in this article.
 
+   ![ExampleDashboard](Vacuum_Dashboard.png)
+
 Welcome to comments and any improvements that can be made to this, and I hope this is helpful to folks until the official integration provides for a better solution.
 
 
