@@ -41,6 +41,7 @@ A [sample script](Selective_Room_Cleaning.yaml) can be utilized.
   The script in its current form will not clean individual rooms, so a minimum of 2 rooms/input_booleans need to be set in order for the script to work. 
 
 ## Putting it all together
+I've included my [dashboard yaml](Sample%20Dashboard.yml)
 
 
 
