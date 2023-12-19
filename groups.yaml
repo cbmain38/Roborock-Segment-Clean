@@ -1,0 +1,13 @@
+rooms_to_clean:
+    name: Rooms To Clean
+    entities:
+        - input_boolean.living_room_clean
+        # Reminder: Set these to your specific input_booleans
+        - input_boolean.dining_room_clean
+        - input_boolean.entrance_clean
+        - input_boolean.kitchen_clean
+        - input_boolean.hallway_clean
+        - input_boolean.kids_room_clean
+        - input_boolean.bathroom_clean
+        - input_boolean.e_and_c_room_clean
+    all: false
