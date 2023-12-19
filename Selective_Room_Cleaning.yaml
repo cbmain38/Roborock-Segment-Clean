@@ -5,7 +5,7 @@ sequence:
       command: app_segment_clean
       params:
         - segments: >
-            {%- set rooms = {
+              {%- set rooms = {
                 "input_boolean.living_room_clean": 16,
                 "input_boolean.dining_room_clean": 23,
                 "input_boolean.entrance_clean": 24,
@@ -23,6 +23,6 @@ sequence:
             {%- endfor -%} {{ ns.room_numbers | join(', ') }}
           repeat: 1
     target:
-      entity_id: vacuum.roborock_s8_pro_ultra
+      entity_id: vacuum.roborock_s8_pro_ultra # Replace with your entity_id for your vacuum
 mode: single
 icon: mdi:robot-vacuum
