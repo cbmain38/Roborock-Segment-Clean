@@ -25,6 +25,14 @@ To add a group helper that can include input_boolean entities, there are a few s
 
      <sub>group: !include groups.yaml</sub>
 
-  2) In the same directory as your configuration.yaml file, add a folder named groups.yaml, and add following sample groups.yaml code. Reminder to set the input_booleans specific to your configuration.
+  2) In the same directory as your configuration.yaml file, add a folder named groups.yaml, and add following sample groups.yaml code. Reminder to set the input_booleans specific to your configuration.  
+
+     Once added, your group will be available in Home Assistant as an entity. Note: It will not be under helpers.
+
+     ![ExampleGroup](Rooms_To_Clean_1.png)
+     ![ExampleGroup](Rooms_To_Clean_2.png)
+
+### Script
+
 
 
