@@ -52,7 +52,7 @@ I've included my [dashboard yaml](SampleDashboard.yml) to use as an example of h
 
    ![ExampleDashboard](Vacuum_Dashboard.png)
 
-Welcome to comments and any improvements that can be made to this, and I hope this is helpful to folks until the official integration provides for a better solution.
+Welcome to comments and any improvements that can be made to this, and I hope this is helpful to folks until the official integration provides for a better solution. Credit to the folks in this HA thread for pointers https://community.home-assistant.io/t/how-to-create-a-list-of-multiple-rooms-to-clean-within-an-automation/627729/12
 
 
 
